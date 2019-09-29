@@ -1,0 +1,49 @@
+.App {
+    text-align: center;
+    background-color: #152c47;
+    width: auto;
+    height: 40vh;
+    padding: 30vh;
+}
+
+.error {
+    border: red solid 2px;
+}
+
+.text {
+    color: white;
+}
+
+.limit span {
+    margin: 15px;
+    border: 5px;
+}
+
+.limit input {
+    width: 50px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.set {
+    border: 5px;
+    width: 7%;
+    height: 2em;
+    color: white;
+    text-shadow: 3px 3px 5px white;
+    background-color: mediumslateblue;
+    font-size: 15px;
+}
+.incReset {
+    border: 5px;
+    width: 7%;
+    height: 2em;
+    color: white;
+    text-shadow: 3px 3px 5px white;
+    background-color: mediumslateblue;
+    font-size: 15px;
+}
+.componentIncReset button {
+    border: 5px;
+}
+
