@@ -1,7 +1,8 @@
 import React from 'react';
 
 class IncReset extends React.Component {
-    render = (props) => {
+
+    render  () {
         return (
             <div className='componentIncReset'>
                 <button className='incReset' disabled={this.props.state.status} onClick={this.props.addStep}>Inc</button>
