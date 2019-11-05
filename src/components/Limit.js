@@ -54,7 +54,6 @@ class Limit extends React.Component {
         }
     };
     onSetButtonClick = () => {
-        debugger
         let newMaxLimit = this.state.maxLimit;
         let newStartLimit = this.state.startLimit;
         this.props.setValue(newMaxLimit, newStartLimit);
@@ -69,16 +68,20 @@ class Limit extends React.Component {
         let inputErrorStart = this.state.blockInputStart ? 'error' : '';
         return (
             <div className="limit">
-                <br/>
-                <span className='text'>Max value</span>
-                <span className='text'>Start value</span>
-                <br/>
-                <input className={inputErrorMax} onChange={this.onMaxLimitButtonClick} value={this.state.maxLimit}
-                       type='number' min={0}/>
-                <input className={inputErrorStart} onChange={this.onStartLimitButtonClick} value={this.state.startLimit}
-                       type='number' min={0}/>
-                <br/>
-                <button className='set' disabled={this.state.statusSet} onClick={this.onSetButtonClick}>Set</button>
+                <div className="textLimit">
+                    <span className='text'>Max value</span>
+                    <span className='text'>Start value</span>
+                </div>
+                <div>
+                    <input className={inputErrorMax} onChange={this.onMaxLimitButtonClick} value={this.state.maxLimit}
+                           type='number' min={0}/>
+                    <input className={inputErrorStart} onChange={this.onStartLimitButtonClick}
+                           value={this.state.startLimit}
+                           type='number' min={0}/>
+                </div>
+                <div className='buttonSet'>
+                    <button className='set' disabled={this.state.statusSet} onClick={this.onSetButtonClick}>Set</button>
+                </div>
             </div>
         );
     }

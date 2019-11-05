@@ -43,7 +43,6 @@ class App extends React.Component {
         this.props.reset(startValue)
     };
     setValue = (newMaxValue, newStartValue) => {
-        debugger
         this.props.changeStartValue(newStartValue);
         this.props.changeMaxValue(newMaxValue);
         if (this.props.state.value !== newStartValue) {
@@ -57,9 +56,11 @@ class App extends React.Component {
     render = () => {
         return (
             <div className="App">
-                <Value state={this.props.state}/>
-                <IncReset addStep={this.addStep} reset={this.reset} state={this.state}/>
-                <Limit changeStatus={this.changeStatus} setValue={this.setValue}/>
+                <div className="display">
+                    <Value state={this.props.state}/>
+                    <IncReset addStep={this.addStep} reset={this.reset} state={this.state}/>
+                    <Limit changeStatus={this.changeStatus} setValue={this.setValue}/>
+                </div>
             </div>
         );
     }
